@@ -1,0 +1,321 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Superfluid Subgraph Deployment Information</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./configs.js"></script>
+</head>
+
+<body>
+    <style>
+        h1 {
+            font-size: 1.1rem;
+        }
+
+        h2 {
+            font-size: 1rem;
+        }
+
+        h3 {
+            font-size: 0.9rem;
+        }
+
+        h3,
+        p,
+        h2,
+        h1 {
+            margin: 0.33rem;
+        }
+
+        .outer-container {
+            display: flex;
+        }
+
+        .configuration {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-right: 4.20vw;
+        }
+
+        .healthy-text {
+            color: green;
+        }
+
+        .in-progress-text {
+            color: orange;
+        }
+
+        .warning-text {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+    <div class="outerDiv">
+        <a href="index.html">Back</a>
+        <h1>Subgraph Deployment Information</h1>
+        <div class="outer-container">
+            <div class="configuration">
+                <h2>V1</h2>
+                <div>
+                    <div id="v1-matic">
+                        <h3 id="v1-matic-header">MATIC</h3>
+                    </div>
+                    <div id="v1-xdai">
+                        <h3 id="v1-xdai-header">XDAI</h3>
+                    </div>
+                    <div id="v1-arbitrum-one">
+                        <h3 id="v1-arbitrum-one-header">ARBITRUM ONE</h3>
+                    </div>
+                    <div id="v1-optimism-mainnet">
+                        <h3 id="v1-optimism-mainnet-header">OPTIMISM MAINNET</h3>
+                    </div>
+                    <div id="v1-avalanche-c">
+                        <h3 id="v1-avalanche-c-header">AVALANCHE C-CHAIN</h3>
+                    </div>
+                    <div id="v1-bsc-mainnet">
+                        <h3 id="v1-bsc-mainnet-header">BSC MAINNET</h3>
+                    </div>
+                    <div id="v1-goerli">
+                        <h3 id="v1-goerli-header">GOERLI</h3>
+                    </div>
+                    <div id="v1-mumbai">
+                        <h3 id="v1-mumbai-header">MUMBAI</h3>
+                    </div>
+                    <div id="v1-avalanche-fuji">
+                        <h3 id="v1-avalanche-fuji-header">AVALANCHE-FUJI</h3>
+                    </div>
+                    <div id="v1-optimism-goerli">
+                        <h3 id="v1-optimism-goerli-header">OPTIMISM-GOERLI</h3>
+                    </div>
+                    <div id="v1-arbitrum-goerli">
+                        <h3 id="v1-arbitrum-goerli-header">ARBITRUM-GOERLI</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="configuration">
+                <h2>DEV</h2>
+                <div>
+                    <div id="dev-matic">
+                        <h3 id="dev-matic-header">MATIC</h3>
+                    </div>
+                    <div id="dev-xdai">
+                        <h3 id="dev-xdai-header">XDAI</h3>
+                    </div>
+                    <div id="dev-arbitrum-one">
+                        <h3 id="dev-arbitrum-one-header">ARBITRUM ONE</h3>
+                    </div>
+                    <div id="dev-optimism-mainnet">
+                        <h3 id="dev-optimism-mainnet-header">OPTIMISM MAINNET</h3>
+                    </div>
+                    <div id="dev-avalanche-c">
+                        <h3 id="dev-avalanche-c-header">AVALANCHE C-CHAIN</h3>
+                    </div>
+                    <div id="dev-bsc-mainnet">
+                        <h3 id="dev-bsc-mainnet-header">BSC MAINNET</h3>
+                    </div>
+                    <div id="dev-goerli">
+                        <h3 id="dev-goerli-header">GOERLI</h3>
+                    </div>
+                    <div id="dev-mumbai">
+                        <h3 id="dev-mumbai-header">MUMBAI</h3>
+                    </div>
+                    <div id="dev-avalanche-fuji">
+                        <h3 id="dev-avalanche-fuji-header">AVALANCHE-FUJI</h3>
+                    </div>
+                    <div id="dev-optimism-goerli">
+                        <h3 id="dev-optimism-goerli-header">OPTIMISM-GOERLI</h3>
+                    </div>
+                    <div id="dev-arbitrum-goerli">
+                        <h3 id="dev-arbitrum-goerli-header">ARBITRUM-GOERLI</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="configuration">
+                <h2>FEATURE</h2>
+                <div id="feature-matic">
+                    <h3 id="feature-matic-header">MATIC</h3>
+                </div>
+                <div id="feature-goerli">
+                    <h3 id="feature-goerli-header">GOERLI</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const GRAPHQL_STATUS_API = "https://api.thegraph.com/index-node/graphql";
+        const sfMetaQuery =
+            `{
+                response: sfmetas{
+                    id
+                    configuration
+                    branch
+                }
+            }`;
+        const indexingStatusQuery = (pending, subgraphName) =>
+            `{
+                response: indexingStatusFor${pending ? "Pending" : "Current"}Version(subgraphName: "${subgraphName}") {
+                    node
+                    chains {
+                        chainHeadBlock {
+                            number
+                            hash
+                        }
+                        earliestBlock {
+                            number
+                            hash
+                        }
+                        latestBlock {
+                            number
+                            hash
+                        }
+                        lastHealthyBlock {
+                            number
+                        }
+                    }
+                    entityCount
+                    health
+                    fatalError {
+                        message
+                    }
+                    synced
+                    subgraph
+                }
+            }`;
+        async function subgraphQuery(endpoint, query) {
+            const result = $.ajax({
+                url: endpoint,
+                crossDomain: true,
+                contentType: "application/json",
+                type: 'POST',
+                data: JSON.stringify({
+                    query
+                }),
+                success: function (result) {
+                    return result;
+                }
+            });
+            return result;
+        }
+
+        function appendSubgraphInfo(el, response, configNetwork) {
+            const latestBlock = response.chains[0].latestBlock.number;
+            const chainHeadBlock = response.chains[0].chainHeadBlock.number;
+            const subgraphContainerId = configNetwork + "-subgraph-container";
+            const headerEl = $(`#${configNetwork}-header`);
+            el.append(`
+                <div style="display: flex; justify-content: space-between; align-items: center">
+                    <h3>Subgraph Info</h3>
+                    <button style="height: fit-content" onclick='$("#${subgraphContainerId}").toggle()'>Show/Hide</button>
+                </div>
+            `);
+            const headBlockCurrentIndexedDifference = chainHeadBlock - latestBlock;
+            const isIndexerLagging = response.synced === true && headBlockCurrentIndexedDifference > 10;
+            const headerElColor = response.synced === false
+                ? "orange"
+                : response.health === "healthy" && !isIndexerLagging ? "green" : "red";
+            headerEl.css("color", headerElColor);
+            el.append(`
+                <div id=${subgraphContainerId} style="display: none">
+                    <p><b>Latest Indexed Block / Head Block:</b> ${latestBlock} / ${chainHeadBlock}</p>
+                    <p><b>Subgraph ID:</b> ${response.subgraph}</p>
+                    <p><b>Node:</b> ${response.node}</p>
+                    <p><b>Earliest Block:</b> ${response.chains[0].earliestBlock.number}</p>
+                    <p class=${isIndexerLagging ? "warning-text" : "healthy-text"}><b>Head vs. Indexed Block Difference:</b> ${headBlockCurrentIndexedDifference}</p>
+                    ${response.chains[0].lastHealthyBlock ? `<p><b>Latest Healthy Block:</b> ${response.chains[0].lastHealthyBlock.number}</p>` : ""}
+                    <p><b>Entity Count:</b> ${response.entityCount}</p>
+                    <p><b>Synced:</b> ${response.synced}</p>
+                </div>
+            `);
+        }
+
+        async function fillDiv(configuration, data) {
+            const configNetwork = configuration + "-" + data.networkName;
+            const subgraphName = "superfluid-finance/protocol-" + configNetwork;
+            const el = $(`#${configNetwork}`);
+            el.prepend(`<hr />`);
+            const endpoint = configuration === "v1"
+                ? data.subgraphV1Endpoint
+                : configuration === "dev"
+                    ? data.subgraphDevEndpoint
+                    : data.subgraphFeatureEndpoint;
+            const sfMetaData = await subgraphQuery(endpoint, sfMetaQuery);
+            const pendingIndexingStatus = await subgraphQuery(GRAPHQL_STATUS_API, indexingStatusQuery(true, subgraphName));
+
+            // show pending first
+            if (pendingIndexingStatus.data.response) {
+                const pendingResponse = pendingIndexingStatus.data.response;
+                if (pendingResponse && pendingResponse.health === "healthy") {
+                    const blocksLeft = Number(pendingResponse.chains[0].chainHeadBlock.number) - Number(pendingResponse.chains[0].latestBlock.number);
+                    el.append(`<p class="is-indexing"><b>This subgraph is still indexing.</b></p>`);
+                    el.append(`<p class="is-indexing"><b>Blocks left:</b> ${blocksLeft.toLocaleString('en-US')}</p>`);
+                    $(`.is-indexing`).css("color", "orange");
+                    appendSubgraphInfo(el, pendingResponse, configNetwork);
+                } else if (pendingResponse && pendingResponse.fatalError) {
+                    el.append(`<p>There was an error indexing the subgraph: ${pendingResponse.fatalError.message}</p>`);
+                    appendSubgraphInfo(el, pendingResponse, configNetwork);
+                } else {
+                    const currentIndexingStatus = await subgraphQuery(GRAPHQL_STATUS_API, indexingStatusQuery(false, subgraphName));
+                    const currentResponse = currentIndexingStatus.data.response;
+                    if (currentResponse && currentResponse.health === "healthy") {
+                        el.append(`<p><b>This subgraph doesn't have the SFMeta entity yet.</b></p>`);
+                        appendSubgraphInfo(el, currentResponse, configNetwork);
+                    } else {
+                        el.append(`<p><b>This subgraph isn't deployed yet.</b></p>`);
+                    }
+                }
+                return;
+            }
+            // show indexed status
+            if (sfMetaData && sfMetaData.data && pendingIndexingStatus.response == null) {
+                const indexingStatus = await subgraphQuery(GRAPHQL_STATUS_API, indexingStatusQuery(false, subgraphName));
+                const response = indexingStatus.data.response;
+                if (response == null) {
+                    console.log("subgraphName", subgraphName);
+                }
+                const shortHash = sfMetaData.data.response[0].id.substring(0, 7);
+                const gitContainerId = configNetwork + "-git-container";
+                el.append(`
+                    <p><b>Branch:</b> ${sfMetaData.data.response[0].branch}</p>
+                    <p><b>Commit Hash:</b> <a href="https://github.com/superfluid-finance/protocol-monorepo/commit/${shortHash}" target="_blank">${shortHash}</a></p>
+                `);
+                appendSubgraphInfo(el, response, configNetwork);
+            }
+        }
+
+        const configEntries = Object.entries(CONFIGS);
+        for (let i = 0; i < configEntries.length; i++) {
+            const configData = configEntries[i][1];
+            if (configData.subgraphV1Endpoint) {
+                fillDiv("v1", configData);
+            }
+            if (configData.subgraphDevEndpoint) {
+                fillDiv("dev", configData);
+            }
+            if (configData.subgraphFeatureEndpoint) {
+                fillDiv("feature", configData);
+            }
+            if (configData.subgraphV1Endpoint === "") {
+                const configNetwork = "v1-" + configData.networkName;
+                const el = $(`#${configNetwork}`);
+                if (el) {
+                    el.prepend(`<hr />`);
+                    el.append(`<p><b>This subgraph isn't deployed yet.</b></p>`);
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
